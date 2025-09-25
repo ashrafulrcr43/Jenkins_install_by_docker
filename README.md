@@ -11,3 +11,8 @@ docker run -d -p 8080:8080 -p 5000:5000 --name jenkins -v jenkins_home:/var/jenk
 ## Unlock Jenkins -> /var/jenkins_home/secrets/initialAdminPassword
 docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ### Install plugin And Create First Admin User
+## Resetting if Needed
+<pre>
+docker rm -f jenkins
+docker volume rm jenkins_home
+</pre>
